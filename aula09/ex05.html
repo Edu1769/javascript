@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(73, 73, 73);
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">estudos com DOM</h1>
+    <main id="conteudo">
+        <P>Aqui vai o resultado</P>
+        <p>Aprendendo a usar o <strong>DOM</strong> em JS</p>
+        <div id="msg">Clique aqui</div> <br>
+    </main>
+
+    <script>
+        var x = window.document.getElementsByTagName("p")[0]
+        var y = window.document.getElementById("msg")
+        var z = window.document.getElementById("titulo")
+        var cont = window.document.getElementById("conteudo")
+
+        window.document.write("<br> Primeiro paragrafo replicado: ("+x.innerText+ ")")
+        window.document.write("<br>Resplicando de forma diferente (" + y.innerText + ")")
+        
+        z.style.fontSize = "50px"
+        z.style.background = "#910085"
+        z.style.padding = "10px"
+        z.style.borderRadius = "10px"
+        z.style.width = "500px"
+        z.style.margin = "auto"
+        z.style.textAlign = "center"
+
+        cont.style.background = "white"
+        cont.style.color = "black"
+        cont.style.width = "400px"
+        cont.style.borderRadius = "10px"
+        cont.style.padding = "6px"
+        cont.style.textAlign = "center"
+        cont.style.margin = "auto"
+        cont.style.marginTop = "30px"
+
+        
+    </script>
+</body>
+</html>
