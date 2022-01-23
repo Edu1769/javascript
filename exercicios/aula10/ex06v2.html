@@ -18,12 +18,16 @@
     </style>
 </head>
 <body>
-
-    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseleave="saiu()">
+    <div id="area">
         interaja...
     </div>
 
     <script>
+        var a = window.document.getElementById("area")
+        a.addEventListener("click",clicar)
+        a.addEventListener("mouseentrou", entrar)
+        a.addEventListener("mousesaiu", saiu)
+
         function clicar(){
             var a = window.document.getElementById("area")
             a.innerText = "Clicou!"
@@ -31,19 +35,16 @@
             
         }
         function entrar(){
-            var e = window.document.getElementById("area")
-            e.innerText = "Entrou!"
-            e.style.boxShadow =  "2px 2px 4px #8dcc69"
-            e.style.background = "##146914"
+            a.innerText = "Entrou!"
+            a.style.boxShadow =  "2px 2px 4px #8dcc69"
+            a.style.background = "##146914"
             
         }
         function saiu(){
-            var s = window.document.getElementById("area")
-            s.innerText = "Saiu!"
-            s.style.boxShadow = "0px 0px 0px black"
-            s.style.background = "#168116"
+            a.innerText = "Saiu!"
+            a.style.boxShadow = "0px 0px 0px black"
+            a.style.background = "#168116"
         }
     </script>
-    
 </body>
 </html>
