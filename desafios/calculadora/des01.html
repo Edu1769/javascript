@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body id="corpo">
+
+    <div id="darkmode_button">
+        <img id="sol" src="https://img.icons8.com/ios/50/000000/sun--v1.png"/>
+    </div>
+
+
+    <div id="base">
+
+        <div id="res"> 
+
+            <h1 id="txt_res">Resultado</h1>
+
+        </div>
+        <div id="fileiras">
+
+            <div id="fileira1">
+                <div> <input id="n0" class="numeros" type="button" value="0"> </div>
+                <div id="n1"> <input class="numeros" type="button" value="1"> </div>
+                <div id="n2"> <input class="numeros" type="button" value="2"> </div>
+                <div id="n3"> <input class="numeros" type="button" value="3"> </div>
+                <div id="n4"> <input class="numeros" type="button" value="4"> </div>
+            </div>
+
+            <div id="fileira2">
+                <div id="n5"> <input class="numeros" type="button" value="5"> </div>
+                <div id="n6"> <input class="numeros" type="button" value="6"> </div>
+                <div id="n7"> <input class="numeros" type="button" value="7"> </div>
+                <div id="n8"> <input class="numeros" type="button" value="8"> </div>
+                <div id="n9"> <input class="numeros" type="button" value="9"> </div>
+            </div>
+
+            <div id="fileira1">
+                <div> <input id="soma" class="numeros" type="button" value="soma"> </div>
+                <div id="div"> <input class="numeros" type="button" value="div"> </div>
+            </div>
+
+        </div>
+    </div>
+    
+    
+         
+    <script> // darkmode
+        var trocar = document.getElementById("darkmode_button")
+        var icone = document.getElementById("sol")
+        var corpo = document.getElementById("corpo")
+        
+        trocar.addEventListener("click", clicou)
+
+        function clicou(){
+            if(corpo != "#36393F")
+            {
+                corpo.style.background = "#36393F"
+            }
+            else{
+                corpo.style.background = "white"
+            }
+            icone.innerText = "https://img.icons8.com/ios-glyphs/30/000000/moon-symbol.png/"
+        }
+    </script>
+</body>
+</html>

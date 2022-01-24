@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        body{
+            font: normal 13pt arial;
+        }
+        #limite {
+            margin-top: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+
+    Velocidade do carro: <input id="txtvel" type="number"> km/h
+    <input id="botão" type="button" value="verificar">
+    
+    <div id="limite"></div>
+    
+
+    <script>
+        var vel = document.getElementById("txtvel")
+        var lim = document.getElementById("limite")
+        var bot = document.getElementById("botão")
+        bot.addEventListener("click", calcular)
+        
+        function calcular(){
+            var n1 = Number(vel.value)
+            
+            if(n1 > 60)
+            {
+                lim.innerHTML = "VOCÊ ULTRAPASSOU A VELOCIDADE, <strong>MULTADO!! </strong>"
+            }
+            else{
+                lim.innerText = "Tenha uma boa viagem!!"
+            }
+        }
+    </script>
+</body>
+</html>
