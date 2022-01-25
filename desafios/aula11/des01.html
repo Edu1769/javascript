@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos pls</title>
+</head>
+<body>
+    <h1>Coloque sua nacionalidade</h1>
+    <div>
+        <input type="text" id="pais">
+        <input type="button" id="verificar" value="Verificar">
+    </div>
+    <p id="texto">Você é: </p>
+    
+    <script>
+        var pais = document.getElementById("pais")
+        var verf = document.getElementById("verificar")
+        var text = document.getElementById("texto")
+        verf.addEventListener("click", verificar)
+
+        function verificar()
+        {
+            var identidade = (pais.value)
+            
+            if(identidade == "brasileiro" || identidade == "brasil")
+            {
+                text.innerHTML = "Você é: Brasileiro"
+            }
+            else{
+                text.innerHTML = "Você é: Estrangeiro"
+            }
+        }
+        
+    </script>
+</body>
+</html>
